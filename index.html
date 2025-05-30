@@ -8,17 +8,22 @@
     <title>Dragon ball</title>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>Dragon Ball</h1>
-    </header>
-
-    <div class="container text-center">
-      <button id="btn-buscar" class="btn btn-primary mt-4">TRAER DATOS</button>
-      <h1 class="text-center">API</h1>
-      <div id="contenedor-data" class="row">
-        <!-- Aquí se mostrarán los datos de la API -->
-      </div>
+    <div class="container mt-4">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        id="inputBusqueda"
+        class="form-control"
+        placeholder="Buscar personaje..."
+      />
+      <button id="btnBuscar" class="btn btn-primary">Buscar</button>
     </div>
+
+    <div id="mensaje" class="mb-3 text-center text-danger fw-bold"></div>
+
+    <div class="row" id="contenedorPersonajes"></div>
+  </div>
+</div>
 
     </main>            
     
