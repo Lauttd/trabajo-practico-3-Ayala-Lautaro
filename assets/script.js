@@ -19,14 +19,17 @@ const cargarDatos = async (url) => {
   }
 };
 
-// Evento click del botón "TRAER DATOS"
+// Evento click del botón traer datos
 btnBuscar.addEventListener("click", async () => {
   const data = await cargarDatos(urlDragonBall);
   const dataPersonajes = data.items;
   console.log(dataPersonajes);
 
-  contenedorPadre.innerHTML = ""; // Limpiar contenido previo
 
+  contenedorPadre.innerHTML = "";
+
+
+  // Verifica si hay personajes para mostrar
   dataPersonajes.forEach((personaje) => {
     contenedorPadre.innerHTML += `
       <div class="col-3 pb-2 d-flex justify-content-center" data-id=${personaje.id}>
@@ -95,7 +98,7 @@ document.addEventListener("click", async (e) => {
   }
 });
 
-// 🔍 Evento de búsqueda por nombre
+// Evento de búsqueda por nombre
 btnBusqueda.addEventListener("click", async (e) => {
   e.preventDefault();
 
@@ -117,6 +120,7 @@ btnBusqueda.addEventListener("click", async (e) => {
     return;
   }
 
+  // Muestra los personajes filtrados
   personajesFiltrados.forEach((personaje) => {
     contenedorPadre.innerHTML += `
       <div class="col-3 pb-2 d-flex justify-content-center" data-id=${personaje.id}>
