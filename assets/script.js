@@ -1,6 +1,6 @@
 const btnBuscar = document.getElementById("btn-buscar");
 const contenedorPadre = document.getElementById("contenedor-data");
-const urlDragonBall = "https://dragonball-api.com/api/characters?limit=40";
+const urlDragonBall = "https://dragonball-api.com/api/characters";
 
 const cargarDatos = async (url) => {
   try {
@@ -64,12 +64,3 @@ contenedorPadre.addEventListener("click", (e) => {
 });
 
 
-// Scroll infinito
-    window.addEventListener("scroll", () => {
-      if (
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
-        !loading
-      ) {
-        page++;
-      }
-    });
