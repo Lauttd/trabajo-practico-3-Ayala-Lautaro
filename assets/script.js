@@ -2,7 +2,7 @@ const btnBuscar = document.getElementById("btn-buscar");
 const btnBusqueda = document.getElementById("btn-busqueda");
 const inputBusqueda = document.getElementById("input-busqueda");
 const contenedorPadre = document.getElementById("contenedor-data");
-const urlDragonBall = "https://dragonball-api.com/api/characters?limit=50";
+const urlDragonBall = "https://dragonball-api.com/api/characters?limit=100";
 
 // Función para cargar los datos de la API
 const cargarDatos = async (url) => {
