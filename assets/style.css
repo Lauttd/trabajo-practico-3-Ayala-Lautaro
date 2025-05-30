@@ -2,6 +2,13 @@ body{
     background-image: url("js/img/vecteezy_dragon-ball-landscape-scene-background_20793913.jpg");
 }
 
-contenedor-data{
-    height: 100px;
+.img-hover{
+  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.img-hover:hover{
+  transform: scale(1.2);
+  z-index: 10;
 }
